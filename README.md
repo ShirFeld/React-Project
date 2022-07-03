@@ -2,17 +2,9 @@
 
 > NOTE: ALL RIGHTS RESERVED TO Shir Feldman
 
+# Home Page
 
-
-## **1. HOME PAGE**
-
-<img src="/Shir/react/zoo-app/src/pics/main2.jpg"/>
-
-
-<br><br>
-
-
-
+<img src="./public/1.PNG"/>
 
 ## Available Scripts
 
