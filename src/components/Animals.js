@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getAnimals } from "../firebase/zooFunctions";
-import AnimalCard from "./AnimalCard";
+import AnimalCard from "./AnimalsCard";
 import { Col, Row, Button } from "react-bootstrap";
 
 
@@ -38,32 +38,28 @@ export default function Animals() {
         <div>
             <Row xs={1} md={1} lg={3} className="g-2">
                 <Col className="d-flex justify-content-center">
-                    <Button
-                        variant="info"
-                        className="w-50"
-                        onClick={() => setDisplayType("sea")}
-                    >
+
+                    <button onClick={() => setDisplayType("sea")}
+                        type="button" class="btn btn-outline-primary">
                         Sea animals
-                    </Button>
+                    </button>
+
+
                 </Col>
                 <Col className="d-flex justify-content-center">
-                    <Button
-                        variant="warning"
-                        className="w-50"
-                        onClick={() => setDisplayType("land")}
-                    >
+                    <button onClick={() => setDisplayType("land")}
+                        type="button" class="btn btn-outline-success">
                         Land animals
-                    </Button>
+                    </button>
                 </Col>
+
                 <Col className="d-flex justify-content-center">
-                    <Button
-                        variant="success"
-                        className="w-50"
-                        onClick={() => setDisplayType("air")}
-                    >
+                    <button onClick={() => setDisplayType("air")}
+                        type="button" class="btn btn-outline-info">
                         Air animals
-                    </Button>
+                    </button>
                 </Col>
+
             </Row>
             <Row xs={1} md={2} lg={3} className="g-3 m-1">
                 {displayAnimals.map((animal) => {

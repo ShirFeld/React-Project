@@ -106,7 +106,7 @@ export default function AddAnimal() {
           <Form.Group className="mb-3">
             <Form.Label>Type</Form.Label>
             <Form.Select value={type} onChange={(e) => setType(e.target.value)}>
-              <option value={""} selected="true" disabled="disabled">
+              <option value={""} disabled="disabled">
                 Choses...
               </option>
               <option value={"air"}>Air</option>
