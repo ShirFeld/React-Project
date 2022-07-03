@@ -21,7 +21,7 @@ export default function AnimalCard({ id, animal, refreshData }) {
                     variant="top"
                     src={animal.imgUrl}
                     height="450px"
-                    style={{ objectFit: "contain" }}
+                    style={{ objectFit: "cover" }}
                 />
                 <Card.Body className="d-flex flex-column">
                     <Card.Title>
@@ -36,13 +36,12 @@ export default function AnimalCard({ id, animal, refreshData }) {
                             View Data
                         </Button>
                     </Link>
-                    <Button
-                        variant="danger"
-                        className="w-100"
-                        onClick={deleteAnimalHandler}
-                    >
-                        Delete
-                    </Button>
+
+                    <button onClick={deleteAnimalHandler} type="button"
+                        className="btn btn-danger">  Delete
+                    </button>
+
+
                 </Card.Body>
             </Card>
         </>
