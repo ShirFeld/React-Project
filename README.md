@@ -6,7 +6,7 @@
 
 ## **1. HOME PAGE**
 
-<img src="./src/pics/1.PNG"/>
+<img src="/Shir/react/zoo-app/src/pics/main2.jpg"/>
 
 
 <br><br>
