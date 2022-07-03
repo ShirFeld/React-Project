@@ -2,3 +2,13 @@
 .App {
   text-align: center;
 }
+
+.btn{
+  background-color:"#5ec3e9" ;
+  border-radius: 13;
+  border-color: "#5ec3e9";
+  font-size: 25 ;
+
+}
+
+

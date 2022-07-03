@@ -16,7 +16,7 @@ export default function AnimalCard({ id, animal, refreshData }) {
 
         <>
             <br></br>
-            <Card>
+            <Card >
                 <Card.Img
                     variant="top"
                     src={animal.imgUrl}

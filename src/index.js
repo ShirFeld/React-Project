@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import Animals from "./components/Animals";
+import AnimalsCategory from "./components/AnimalsCategory";
 import AddAnimal from "./pages/AddAnimalPage";
 import AnimalDetails from "./components/AnimalDetails";
 
@@ -18,8 +18,8 @@ root.render(
       <Route path="/" element={<App />}>
         <Route index element={<HomePage />} />
 
-        <Route path="animals" element={<Animals />}>
-          <Route index element={<Animals />} />
+        <Route path="animals" element={<AnimalsCategory />}>
+          <Route index element={<AnimalsCategory />} />
           <Route path=":animalId" element={<AnimalDetails />} />
         </Route>
 

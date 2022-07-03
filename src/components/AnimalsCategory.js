@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { getAnimals } from "../firebase/zooFunctions";
 import AnimalCard from "./AnimalsCard";
-import { Col, Row, Button } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
+import '../App.css';
 
 
-export default function Animals() {
+export default function AnimalsCategory() {
     const [animals, setAnimals] = useState([]);
 
     const [displayAnimals, SetDisplayAnimals] = useState([]);
@@ -37,11 +38,14 @@ export default function Animals() {
     return (
         <div>
             <br></br>
-            <Row xs={1} md={1} lg={3} className="g-2">
+            <h2 style={{ color: "#5ec3e9", textDecorationLine: 'underline', fontStyle: 'italic', fontSize: 50 }}>Choose category:</h2>
+            <br></br>
+            <Row style={{ marginTop: 30 }} xs={1} md={1} lg={3} className="g-2">
                 <Col className="d-flex justify-content-center">
 
-                    <button onClick={() => setDisplayType("sea")}
-                        type="button" className="btn btn-outline-primary">
+                    <button className="btn"
+                        onClick={() => setDisplayType("sea")}
+                        type="button" >
                         Sea animals
                     </button>
 
@@ -49,14 +53,15 @@ export default function Animals() {
                 </Col>
                 <Col className="d-flex justify-content-center">
                     <button onClick={() => setDisplayType("land")}
-                        type="button" className="btn btn-outline-success">
+                        style={{ backgroundColor: "#5ec3e9", borderColor: "#5ec3e9", borderRadius: 13, fontSize: 25 }}
+                        type="button">
                         Land animals
                     </button>
                 </Col>
 
                 <Col className="d-flex justify-content-center">
                     <button onClick={() => setDisplayType("air")}
-                        type="button" className="btn btn-outline-info">
+                        type="button" style={{ backgroundColor: "#5ec3e9", borderColor: "#5ec3e9", borderRadius: 13, fontSize: 25 }}>
                         Air animals
                     </button>
                 </Col>

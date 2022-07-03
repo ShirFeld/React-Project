@@ -71,7 +71,7 @@ export default function AddAnimal() {
       <Row xs={1} lg={2} className="g-3">
         <Col>
           <Form.Group className="mb-3">
-            <Form.Label>Name</Form.Label>
+            <Form.Label style={{ fontSize: 25 }}>Name:</Form.Label>
             <Form.Control
               type="text"
               placeholder="Enter Animal Name"
@@ -82,7 +82,7 @@ export default function AddAnimal() {
         </Col>
         <Col>
           <Form.Group className="mb-3">
-            <Form.Label>Image Url</Form.Label>
+            <Form.Label style={{ fontSize: 25 }} >Image Url:</Form.Label>
             <Form.Control
               type="text"
               placeholder="Enter Animal Image Url"
@@ -93,7 +93,7 @@ export default function AddAnimal() {
         </Col>
         <Col>
           <Form.Group className="mb-3">
-            <Form.Label>Number Of legs</Form.Label>
+            <Form.Label style={{ fontSize: 25 }} >Number Of legs:</Form.Label>
             <Form.Control
               type="number"
               placeholder="Enter Animal Number Of legs"
@@ -104,10 +104,10 @@ export default function AddAnimal() {
         </Col>
         <Col>
           <Form.Group className="mb-3">
-            <Form.Label>Type</Form.Label>
+            <Form.Label style={{ fontSize: 25 }} >Type:</Form.Label>
             <Form.Select value={type} onChange={(e) => setType(e.target.value)}>
               <option value={""} disabled="disabled">
-                Choses...
+                press to choose
               </option>
               <option value={"air"}>Air</option>
               <option value={"sea"}>Sea</option>
@@ -116,11 +116,11 @@ export default function AddAnimal() {
           </Form.Group>
         </Col>
 
-        <Col>
+        <Col style={{ fontSize: 25 }}>
           <Form.Group className="mb-3">
             <Form.Check
               type="checkbox"
-              label="In Israel"
+              label="In Israel:"
               value={inIsrael}
               onChange={(e) => setInIsrael(e.target.checked)}
             />
@@ -129,10 +129,8 @@ export default function AddAnimal() {
       </Row>
       <Row className="justify-content-center">
         <Button
-          variant="success"
           type="submit"
-          className="w-50"
-          style={{ maxWidth: "350px" }}
+          style={{ maxWidth: "300px", fontSize: 25, backgroundColor: "#5ec3e9", borderColor: "#5ec3e9" }}
         >
           SUBMIT
         </Button>

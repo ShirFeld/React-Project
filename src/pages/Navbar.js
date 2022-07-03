@@ -6,8 +6,8 @@ export default class Navbar extends Component {
     render() {
         return (
             <>
-                <BotNav bg="dark" variant="dark">
-                    <Nav className="me-auto">
+                <BotNav style={{ height: 70 }} bg="dark" variant="dark">
+                    <Nav style={{ fontSize: 20 }} className="me-auto">
                         <Nav.Link to="/" as={NavLink}> Home</Nav.Link>
                         <Nav.Link to="/animals" as={NavLink}> Animals </Nav.Link>
                         <Nav.Link to="/addAnimal" as={NavLink}> Add Animal </Nav.Link>
