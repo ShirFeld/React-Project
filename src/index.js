@@ -8,6 +8,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Animals from "./components/Animals";
 import AddAnimal from "./pages/AddAnimalPage";
+import AnimalDetails from "./components/AnimalDetails";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,7 +20,7 @@ root.render(
 
         <Route path="animals" element={<Animals />}>
           <Route index element={<Animals />} />
-          {/* <Route path=":animalId" element={<AnimalDetails />} /> */}
+          <Route path=":animalId" element={<AnimalDetails />} />
         </Route>
 
         <Route path="addAnimal" element={<AddAnimal />} />

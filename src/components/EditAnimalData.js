@@ -1,64 +1,49 @@
 import React, { useState } from "react";
-import { Form, Row, Col, Button, Alert } from "react-bootstrap";
-import { addAnimal } from "../firebase/zooFunctions";
+import { updateAnimal } from "../firebase/zooFunctions";
+import { Form, Row, Col, Button } from "react-bootstrap";
+export default function EditAnimalData({ id, animal, finishEdit }) {
+  const [validInputs, setValidInputs] = useState(true);
+  const [inValidInputs, setInValidInputs] = useState([]);
 
-export default function AddAnimal() {
-  function submitData(event) {
-    event.preventDefault();
-    if (name === "" || imgUrl === "" || type === "" || numberOfLegs < 0) {
+  const [imgUrl, setImgUrl] = useState(animal.imgUrl);
+  const [inIsrael, setInIsrael] = useState(animal.inIsrael);
+  const [name, setName] = useState(animal.name);
+  const [numberOfLegs, setNumberOfLegs] = useState(animal.numberOfLegs);
+  const [type, setType] = useState(animal.type);
+
+  const submitChange = async (e) => {
+    e.preventDefault();
+    if (name === "" || imgUrl === "" || numberOfLegs < 0) {
       let arr = [];
       setValidInputs(false);
-
       if (imgUrl === "") {
         arr.push("Name");
       }
       if (imgUrl === "") {
-        arr.push("Image Url");
-      }
-      if (type === "") {
-        arr.push("Type");
+        arr.push("Image gUrl");
       }
       if (numberOfLegs < 0) {
         arr.push("Number Of Legs");
       }
       setInValidInputs(arr);
-
       return;
+    } else {
+      let animalChange = {
+        imgUrl: imgUrl,
+        inIsrael: inIsrael,
+        name: name,
+        numberOfLegs: numberOfLegs,
+        type: type,
+      };
+      await updateAnimal(id, animalChange);
+      finishEdit();
     }
-
-    setValidInputs(true);
-    let animal = {
-      name: name,
-      imgUrl: imgUrl,
-      type: type,
-      inIsrael: inIsrael,
-      numberOfLegs: numberOfLegs,
-    };
-    clearFields();
-    addAnimal(animal);
-  }
-
-  function clearFields() {
-    setName("");
-    setImgUrl("");
-    setType("");
-    setInIsrael(false);
-    setNumberOfLegs(0);
-  }
-
-  const [validInputs, setValidInputs] = useState(true);
-  const [inValidInputs, setInValidInputs] = useState([]);
-
-  const [name, setName] = useState("");
-  const [imgUrl, setImgUrl] = useState("");
-  const [type, setType] = useState("");
-  const [inIsrael, setInIsrael] = useState(false);
-  const [numberOfLegs, setNumberOfLegs] = useState(0);
+  };
 
   return (
-    <Form onSubmit={submitData} style={{ margin: "15px" }}>
+    <Form onSubmit={submitChange} style={{ margin: "15px" }}>
       {!validInputs && (
-        <Alert variant="danger">
+        <p>
           The Fields:{" "}
           {inValidInputs.map((i) => (
             <span style={{ color: "red" }} key={i}>
@@ -66,12 +51,12 @@ export default function AddAnimal() {
             </span>
           ))}{" "}
           are invalid
-        </Alert>
+        </p>
       )}
       <Row xs={1} lg={2} className="g-3">
         <Col>
           <Form.Group className="mb-3">
-            <Form.Label>Name</Form.Label>
+            <Form.Label>Edit Name</Form.Label>
             <Form.Control
               type="text"
               placeholder="Enter Animal Name"
@@ -115,13 +100,11 @@ export default function AddAnimal() {
             </Form.Select>
           </Form.Group>
         </Col>
-
         <Col>
           <Form.Group className="mb-3">
             <Form.Check
               type="checkbox"
               label="In Israel"
-              value={inIsrael}
               onChange={(e) => setInIsrael(e.target.checked)}
             />
           </Form.Group>
