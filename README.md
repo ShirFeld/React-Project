@@ -10,7 +10,6 @@
 * Back:
    - Firebase
    - nodemon
-<br>
 
 
 #### <ins>Run </ins>
@@ -27,7 +26,7 @@ then in terminal run:
 npm start
 ```
 good to go have fun!
-<br> 
+<br> <br>  
 
 #### <ins>Home Page:</ins>
 
