@@ -2,7 +2,7 @@
 
 > NOTE: ALL RIGHTS RESERVED TO SHIR FELDMAN
 
-### Using
+#### <ins>Using</ins>
 * Front:
    - Full-Stack-web
    - Bootstrap
@@ -11,47 +11,53 @@
    - Firebase
    - nodemon
 <br>
-  
-### Home Page:
+
+#### <ins>Home Page:</ins>
 
  ![Home page](./src/assets/‏1.jpg)
 <br> 
 
-### Category Page:
+#### <ins>Category Page:</ins>
  ![Category Pag](./src/assets/‏‏2.jpg)
 <br>
 
-### Sea Page:
+#### <ins>Sea Page:</ins>
  ![Sea Page](./src/assets/‏‏3.jpg)
 <br>
 
-### Land Page:
+#### <ins>Land Page:</ins>
  ![Land Page](./src/assets/‏‏4..jpg)
 <br>
 
-### Air Page:
+#### <ins>Air Page:</ins>
  ![Air Page](./src/assets/‏‏5..jpg)
 <br>
 
-### Add new animal:
+#### <ins>Add new animal:</ins>
  ![New animal](./src/assets/8..jpg)
 <br>
 
-### Details:
+#### <ins>Details:</ins>
 ![Details](./src/assets/‏‏6.jpg)
 <br>
 
-### Change Details:
+#### <ins>Change Details:</ins>
 ![Change Details](./src/assets/7.jpg)
 <br>
 
-### Navbar & Footer:
+#### <ins>Navbar & Footer:</ins>
 ![Navbar](./src/assets/10.jpg)
 ![Footer](./src/assets/‏‏9.jpg)
+<br>
+
+#### <ins>Firestore in firebase:</ins>
+![Firestore](./src/assets/‏‏11.jpg)
+
 <br><br><br>
 
 
-## Run 
+
+#### <ins>Run </ins>
 > **_NEED TO INSTALL DEPENDENCIES!_**
 
 
