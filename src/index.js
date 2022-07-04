@@ -9,7 +9,7 @@ import HomePage from "./pages/HomePage";
 import AnimalsCategory from "./components/AnimalsCategory";
 import AddAnimal from "./pages/AddAnimalPage";
 import AnimalDetails from "./components/AnimalDetails";
-
+import MainPage from './pages/MainPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,7 +18,12 @@ root.render(
       <Route path="/" element={<App />}>
         <Route index element={<HomePage />} />
 
-        <Route path="animals" element={<AnimalsCategory />}>
+
+        {/* <Route path="animals" element={<AnimalsCategory />}>
+          <Route path=":animalId" element={<AnimalDetails />} />
+        </Route> */}
+
+        <Route path="animals" element={<MainPage />}>
           <Route index element={<AnimalsCategory />} />
           <Route path=":animalId" element={<AnimalDetails />} />
         </Route>

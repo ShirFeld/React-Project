@@ -4,6 +4,8 @@ import { Card, Row, Alert, Button, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { getAnimals } from "../firebase/zooFunctions";
 import EditAnimalData from "./EditAnimalData";
+import '../App.css';
+
 
 export default function AnimalDetails() {
   const id = useParams().animalId;
@@ -33,7 +35,7 @@ export default function AnimalDetails() {
         {isFetch && animal && (
           <Card
             style={{
-              "margin-bottom": "20px",
+              "marginBottom": "20px",
               padding: "10px",
               minWidth: "50%",
             }}
@@ -41,8 +43,11 @@ export default function AnimalDetails() {
             <Card.Img
               variant="top"
               src={animal.imgUrl}
-              style={{ width: "250px" }}
+              style={{
+                objectFit: "cover", width: 300, alignSelf: 'center',
+              }}
               className="profile-img"
+
             />
             <Card.Body className="d-flex flex-column">
               <Card.Title>
@@ -90,14 +95,14 @@ export default function AnimalDetails() {
       </Container>
       <br />
       <Link
-        to={"/zoo"}
+        to={"/animals"}
         className="d-flex justify-content-center"
         style={{ textDecoration: "none" }}
       >
         <Button
           variant="dark"
           type="submit"
-          className="w-50"
+          className="back"
           style={{ maxWidth: "350px" }}
         >
           Go Back
