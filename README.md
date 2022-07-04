@@ -2,6 +2,16 @@
 
 > NOTE: ALL RIGHTS RESERVED TO SHIR FELDMAN
 
+### Using
+* Front:
+   - Full-Stack-web
+   - Bootstrap
+  
+* Back:
+   - Firebase
+   - nodemon
+<br>
+  
 ### Home Page:
 
  ![Home page](./src/assets/‏1.jpg)
@@ -41,10 +51,20 @@
 <br><br><br>
 
 
-## Available Scripts
+## Run 
+> **_NEED TO INSTALL DEPENDENCIES!_**
 
-In the project directory, you can run:
- `npm start`
+
+run in terminal:
+```js
+npm i
+```
+
+then in terminal run:
+```js
+npm start
+```
+good to go have fun!
 
 
 
