@@ -12,6 +12,23 @@
    - nodemon
 <br>
 
+
+#### <ins>Run </ins>
+> **_NEED TO INSTALL DEPENDENCIES!_**
+
+
+run in terminal:
+```js
+npm i
+```
+
+then in terminal run:
+```js
+npm start
+```
+good to go have fun!
+<br> 
+
 #### <ins>Home Page:</ins>
 
  ![Home page](./src/assets/‏1.jpg)
@@ -57,20 +74,6 @@
 
 
 
-#### <ins>Run </ins>
-> **_NEED TO INSTALL DEPENDENCIES!_**
-
-
-run in terminal:
-```js
-npm i
-```
-
-then in terminal run:
-```js
-npm start
-```
-good to go have fun!
 
 
 
